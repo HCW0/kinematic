@@ -142,7 +142,6 @@ class prim extends JFrame implements Runnable{
 
     private class prim_Button extends JButton{
         prim_Button(String s){
-            this.setText(s);
             this.setPreferredSize(new Dimension(100,40));            
             this.setAction(new AbstractAction(){
                     public void actionPerformed(ActionEvent ae){
@@ -150,17 +149,18 @@ class prim extends JFrame implements Runnable{
                         prim_run();
                     }
             });
+            this.setText(s);
         }
     }
     private class init_Button extends JButton{
         init_Button(String s){
-            this.setText(s);
             this.setPreferredSize(new Dimension(100,40));
             this.setAction(new AbstractAction(){
                     public void actionPerformed(ActionEvent ae){
                         prim.this.init();
                     }
             });
+            this.setText(s);
         }
     }
 
