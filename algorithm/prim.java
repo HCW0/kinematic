@@ -198,19 +198,17 @@ class prim extends JFrame implements Runnable{
             }
 
         }
-
-
     }
 
     public void run(){
         gui_init();
         while(true){
             try{
-                // init();
-                // prim_init();
-                // prim_run(); // night fever
+                init();
+                prim_init();
+                prim_run(); // night fever
                 Thread.sleep(300);
-                repaint();
+                invalidate();
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
