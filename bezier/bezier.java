@@ -82,6 +82,7 @@ class MainActivity extends JFrame implements Runnable{
         mainPane = new GameBoard(800,600);
         this.setContentPane(mainPane);
         gameObject_init();
+        add
 
         pack();
         setVisible(true);
@@ -269,5 +270,19 @@ class Booster extends GameObject{
             ball.dx = ball.dx>0?2*ball.dx:-2*ball.dx;
             flag = false;
         }
+    }
+}
+
+
+class TestMouse extends MouseAdapter{
+
+    GameObject mouseTag ;
+
+    TestMouse(GameObject mouseTag){
+        this.mouseTag = mouseTag;
+    }
+
+    public mouseMoved(MouseMotionEvent mme){
+            mouseTag.setLocation(mme.getX(),mme.getY());
     }
 }
