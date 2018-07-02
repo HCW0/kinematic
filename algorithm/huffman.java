@@ -4,7 +4,7 @@ class huffman{
     int size;
     int weight[][];
     String weight_code[];
-
+		// bring commit points
     huffman(int size){
         this.size = size;
         weight = new int[size][2];
